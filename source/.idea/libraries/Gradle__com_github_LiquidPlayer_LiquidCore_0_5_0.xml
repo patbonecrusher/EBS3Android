@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.LiquidPlayer:LiquidCore-0.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LiquidCore-0.5.0.aar/a668a912e24cd3e8a6f85410071277c4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/LiquidCore-0.5.0.aar/a668a912e24cd3e8a6f85410071277c4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
