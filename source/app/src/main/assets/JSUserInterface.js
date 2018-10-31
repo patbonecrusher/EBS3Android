@@ -1,5 +1,5 @@
-
-
+console.log("here");
+console.error("booboo");
 buildUI = function() {
 
     templateSV = {
