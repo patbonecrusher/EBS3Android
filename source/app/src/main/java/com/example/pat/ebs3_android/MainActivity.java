@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.pat.ebs3_android.ebclasses.EBConsole;
+import com.example.pat.ebs3_android.ebclasses.EBUIBuilder;
 
 import org.liquidplayer.javascript.JSContext;
 import org.liquidplayer.javascript.JSValue;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 //        String mainScript = readJSFile("JSUserInterface.js");
 //        runtime.executeScript(mainScript);
 
+        String dbScript = readJSFile("EBDatabase.js");
         String mainScript = readJSFile("JSUserInterface.js");
 
         JSContext context = new JSContext();
@@ -72,9 +74,14 @@ public class MainActivity extends AppCompatActivity {
 //        };
 
         EBConsole console = new EBConsole(context);
+        EBUIBuilder builder = new EBUIBuilder(context);
         context.property("console", console);
+        context.property("EBUIBuilder", builder);
         context.evaluateScript(mainScript, "http://foo", 0);
+        context.evaluateScript(dbScript, "http://foo", 0);
 
+        JSValue buildUIFunction = context.property("buildUI");
+        buildUIFunction.toObject().toFunction().call(null, null);
 
         context.property("a", 5);
         JSValue aValue = context.property("a");

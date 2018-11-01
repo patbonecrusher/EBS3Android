@@ -17,7 +17,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffaf371b-9c81-43bc-913b-a761d91ffd57" name="Default" comment="" />
+    <list default="true" id="ffaf371b-9c81-43bc-913b-a761d91ffd57" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/EBDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/EBDatabase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBUIBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBUIBuilder.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +51,43 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="24" selection-start-line="24" selection-end-line="37" />
+            <state relative-caret-position="-172">
+              <caret line="86" selection-start-line="86" selection-end-line="86" />
               <folding>
+                <element signature="method#readFromAssets#0;class#MainActivity#0" />
                 <element signature="e#2399#2667#0" expanded="true" />
                 <element signature="e#2666#2667#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSValue.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/org/liquidplayer/javascript/JSValue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="381" selection-start-line="381" selection-end-line="381" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EBUIBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBUIBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSFunction.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/org/liquidplayer/javascript/JSFunction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="542" column="13" selection-start-line="542" selection-start-column="13" selection-end-line="542" selection-end-column="13" />
+              <folding>
+                <element signature="e#14627#14628#0" expanded="true" />
+                <element signature="e#14666#14667#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,24 +96,36 @@
       <file leaf-file-name="EBConsole.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            <state relative-caret-position="239">
+              <caret line="27" column="18" selection-start-line="27" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1173#1174#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1471#1472#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSUserInterface.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JSUserInterface.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EBDatabase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/assets/EBDatabase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JSContext.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/org/liquidplayer/javascript/JSContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="236" selection-start-line="236" selection-end-line="236" />
             </state>
           </provider>
         </entry>
@@ -2593,8 +2643,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBConsole.java" />
+        <option value="$PROJECT_DIR$/app/src/main/assets/EBDatabase.js" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBUIBuilder.java" />
       </list>
     </option>
   </component>
@@ -2702,7 +2754,7 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -2813,19 +2865,19 @@
       <window_info id="Build Variants" sideWeight="0.5007452" side_tool="true" weight="0.24942791" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32967034" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.32967034" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32967034" />
+      <window_info anchor="bottom" id="Logcat" weight="0.32967034" />
       <window_info id="Captures" order="2" weight="0.24942791" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49925485" visible="true" weight="0.24942791" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925485" visible="true" weight="0.24942791" />
       <window_info anchor="bottom" id="Build" weight="0.32967034" />
       <window_info anchor="right" id="Gradle" />
       <window_info id="Structure" order="1" sideWeight="0.5007452" side_tool="true" weight="0.24942791" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3996004" />
       <window_info id="Favorites" sideWeight="0.5007452" side_tool="true" weight="0.24942791" />
       <window_info anchor="right" id="Device File Explorer" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -2849,28 +2901,37 @@
     <option name="LAST_COMMIT_MESSAGE" value="Started moving to liquidjscore from eclipse v8.   Closer to the ios javascriptcore implementation." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBConsole.java">
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/app/ActivityThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1173#1174#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="260">
+          <caret line="2733" lean-forward="true" selection-start-line="2733" selection-end-line="2733" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/org/liquidplayer/javascript/JSContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="24" selection-start-line="24" selection-end-line="37" />
+        <state relative-caret-position="162">
+          <caret line="236" selection-start-line="236" selection-end-line="236" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/EBDatabase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="27" column="18" selection-start-line="27" selection-end-line="28" />
           <folding>
-            <element signature="e#2399#2667#0" expanded="true" />
-            <element signature="e#2666#2667#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2879,6 +2940,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="method#readFromAssets#0;class#MainActivity#0" />
+            <element signature="e#2399#2667#0" expanded="true" />
+            <element signature="e#2666#2667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/org/liquidplayer/javascript/JSFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="542" column="13" selection-start-line="542" selection-start-column="13" selection-end-line="542" selection-end-column="13" />
+          <folding>
+            <element signature="e#14627#14628#0" expanded="true" />
+            <element signature="e#14666#14667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LiquidPlayer/LiquidCore/0.5.0/afa5ee9f3245fb81758e8b00d09c3defecbe006/LiquidCore-0.5.0-sources.jar!/org/liquidplayer/javascript/JSValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBUIBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="106" />
         </state>
       </provider>
     </entry>
