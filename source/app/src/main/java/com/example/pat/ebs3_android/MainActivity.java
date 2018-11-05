@@ -1,12 +1,16 @@
 package com.example.pat.ebs3_android;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.example.pat.ebs3_android.ebclasses.EBConsole;
 import com.example.pat.ebs3_android.ebclasses.EBUIBuilder;
@@ -21,60 +25,67 @@ import java.text.DecimalFormat;
 
 
 public class MainActivity extends AppCompatActivity {
-//    final V8 runtime = V8.createV8Runtime();
-
-    public static String readFromAssets(Context context, String filename) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(context.getAssets().open(filename)));
-
-        // do reading, usually loop until end of file reading
-        StringBuilder sb = new StringBuilder();
-        String mLine = reader.readLine();
-        while (mLine != null) {
-            sb.append(mLine); // process line
-            mLine = reader.readLine();
-        }
-        reader.close();
-        return sb.toString();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        final ConstraintLayout cl = new ConstraintLayout(this);
+        cl.setLayoutParams(new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.MATCH_PARENT));
+
+        RelativeLayout rl = new RelativeLayout(this);
+        rl.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
+
+        final TabLayout tl = new TabLayout(this);
+        tl.setId(View.generateViewId());
+        tl.addTab(tl.newTab().setText("first tab"));
+        tl.addTab(tl.newTab().setText("second tab"));
+//        tl.addTab(tl.newTab().setText("third tab"));
+//        tl.addTab(tl.newTab().setText("fourth tab"));
+        tl.setLayoutParams(new TabLayout.LayoutParams(TabLayout.LayoutParams.MATCH_PARENT, TabLayout.LayoutParams.WRAP_CONTENT));
+        rl.addView(tl);
+
+
+        final ViewPager vp = new ViewPager(this);
+        vp.setId(View.generateViewId());
+        vp.setBackgroundColor(Color.BLUE);
+
+        RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
+        params.addRule(RelativeLayout.BELOW, tl.getId());
+        vp.setLayoutParams(params);
+
+        rl.addView(vp);
+
+        cl.addView(rl);
+
+        final PagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(), tl.getTabCount(), this);
+        vp.setAdapter(adapter);
+        vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl));
+        tl.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onTabSelected(TabLayout.Tab tab) {
+                vp.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
-
-//        this.loadEBClassesIntoV8Context();
-//        runtime.executeScript("console.log('>>>>>>>>>>>>>>> hello, world');");
-
-//        String databaseScript = readJSFile("EBDatabase.js");
-//        runtime.executeScript(databaseScript);
-
-//        String mainScript = readJSFile("JSUserInterface.js");
-//        runtime.executeScript(mainScript);
 
         String dbScript = readJSFile("EBDatabase.js");
         String mainScript = readJSFile("JSUserInterface.js");
 
         JSContext context = new JSContext();
 
-//        JSFunction console = new JSFunction(context,"log") {
-//            public void log(String message) {
-//                System.out.println(">>>> " + message);
-//            }
-//        };
-
         EBConsole console = new EBConsole(context);
-        EBUIBuilder builder = new EBUIBuilder(context);
+        // EBUIBuilder builder = new EBUIBuilder((TabLayout) findViewById(R.id.tabs), (BottomNavigationView) findViewById(R.id.btabs), context);
+        EBUIBuilder builder = new EBUIBuilder(tl, context);
         context.property("console", console);
         context.property("EBUIBuilder", builder);
         context.evaluateScript(mainScript, "http://foo", 0);
@@ -99,27 +110,32 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(df.format(fact_a.toNumber())); // 3628800.0
 
 
+
+        this.setContentView(cl);
     }
+
+    public static String readFromAssets(Context context, String filename) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(context.getAssets().open(filename)));
+
+        // do reading, usually loop until end of file reading
+        StringBuilder sb = new StringBuilder();
+        String mLine = reader.readLine();
+        while (mLine != null) {
+            sb.append(mLine); // process line
+            mLine = reader.readLine();
+        }
+        reader.close();
+        return sb.toString();
+    }
+
 
     private String readJSFile(String fileName) {
         String jsContent = "";
         try {
-            jsContent = MainActivity.readFromAssets(getApplicationContext(), fileName);
+            jsContent = MainActivity22.readFromAssets(getApplicationContext(), fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return jsContent;
     }
-
-//    private void loadEBClassesIntoV8Context() {
-//        final EBConsole console = new EBConsole();
-//        final V8Object v8Console = console.constructV8Object(runtime);
-//        runtime.add("console", v8Console);
-//
-//        final EBUIBuilder uiBuilder = new EBUIBuilder((ConstraintLayout) findViewById(R.id.scl), getApplicationContext());
-//        final V8Object v8UIBuilder = uiBuilder.constructV8Object(runtime);
-//        runtime.add("EBUIBuilder", v8UIBuilder);
-//    }
-
-
 }
