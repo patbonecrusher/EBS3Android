@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -37,16 +38,47 @@ public class EBSplitViewFragment extends Fragment {
         rl.setLayoutParams(prl);
         rl.setBackgroundColor(Color.RED);
 
-        final TextView tv = new TextView(this.getContext());
-        tv.setId(View.generateViewId());
-        tv.setText(tableViewInfo);
-        tv.setTextAppearance(android.R.style.TextAppearance_Large);
+            LinearLayout ll = new LinearLayout(this.getContext());
+            ll.setOrientation(LinearLayout.HORIZONTAL);
+            LinearLayout.LayoutParams pll = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+            ll.setLayoutParams(pll);
+            ll.setBackgroundColor(Color.BLACK);
 
-        RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.CENTER_IN_PARENT);
-        tv.setLayoutParams(params);
+                LinearLayout lll = new LinearLayout(this.getContext());
+                lll.setOrientation(LinearLayout.VERTICAL);
+                LinearLayout.LayoutParams plll = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT, 1);
+                lll.setLayoutParams(plll);
+                lll.setBackgroundColor(Color.RED);
+                ll.addView(lll);
 
-        rl.addView(tv);
+                LinearLayout llr = new LinearLayout(this.getContext());
+                llr.setOrientation(LinearLayout.VERTICAL);
+                LinearLayout.LayoutParams pllr = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT, 2);
+                llr.setLayoutParams(pllr);
+                llr.setBackgroundColor(Color.BLUE);
+                ll.addView(llr);
+
+//            final TextView tv1 = new TextView(this.getContext());
+//            tv1.setId(View.generateViewId());
+//            tv1.setText(message);
+//            tv1.setTextAppearance(android.R.style.TextAppearance_Large);
+//
+//            RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+//            params.addRule(RelativeLayout.CENTER_IN_PARENT);
+//            tv1.setLayoutParams(params);
+//            ll.addView(tv1);
+//
+//            final TextView tv2 = new TextView(this.getContext());
+//            tv2.setId(View.generateViewId());
+//            tv2.setText(message);
+//            tv2.setTextAppearance(android.R.style.TextAppearance_Large);
+//
+//            RelativeLayout.LayoutParams params2= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+//            params2.addRule(RelativeLayout.CENTER_IN_PARENT);
+//            tv1.setLayoutParams(params2);
+//            ll.addView(tv2);
+
+        rl.addView(ll);
 
         return rl;
     }
