@@ -38,13 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         final TabLayout tl = new TabLayout(this);
         tl.setId(View.generateViewId());
-        tl.addTab(tl.newTab().setText("first tab"));
-        tl.addTab(tl.newTab().setText("second tab"));
-//        tl.addTab(tl.newTab().setText("third tab"));
-//        tl.addTab(tl.newTab().setText("fourth tab"));
         tl.setLayoutParams(new TabLayout.LayoutParams(TabLayout.LayoutParams.MATCH_PARENT, TabLayout.LayoutParams.WRAP_CONTENT));
         rl.addView(tl);
-
 
         final ViewPager vp = new ViewPager(this);
         vp.setId(View.generateViewId());
@@ -58,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         cl.addView(rl);
 
-        final PagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(), tl.getTabCount(), this);
+        final EBPagerAdapter adapter = new EBPagerAdapter(getSupportFragmentManager(), this);
         vp.setAdapter(adapter);
         vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tl));
         tl.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -85,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
         EBConsole console = new EBConsole(context);
         // EBUIBuilder builder = new EBUIBuilder((TabLayout) findViewById(R.id.tabs), (BottomNavigationView) findViewById(R.id.btabs), context);
-        EBUIBuilder builder = new EBUIBuilder(tl, context);
+        EBUIBuilder builder = new EBUIBuilder(tl, adapter, context);
         context.property("console", console);
         context.property("EBUIBuilder", builder);
         context.evaluateScript(mainScript, "http://foo", 0);
@@ -132,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
     private String readJSFile(String fileName) {
         String jsContent = "";
         try {
-            jsContent = MainActivity22.readFromAssets(getApplicationContext(), fileName);
+            jsContent = MainActivity.readFromAssets(getApplicationContext(), fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }

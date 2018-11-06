@@ -9,17 +9,29 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class TestFragment extends Fragment {
-    String mMessage;
-    public TestFragment() {
+import org.liquidplayer.javascript.JSObject;
+
+public class EBSplitViewFragment extends Fragment {
+    public EBSplitViewFragment() {
 
     }
-    public TestFragment(String message) {
-        this.mMessage = message;
+
+    public static final EBSplitViewFragment newInstance(String message, String tableViewInfo, String formViewInfo) {
+        EBSplitViewFragment adf =  new EBSplitViewFragment();
+        Bundle bundle = new Bundle(1);
+        bundle.putString("message", message);
+        bundle.putString("tableViewInfo", tableViewInfo);
+        bundle.putString("formViewInfo", formViewInfo);
+        adf.setArguments(bundle);
+        return adf;
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String message = getArguments().getString("message");
+        String tableViewInfo = getArguments().getString("tableViewInfo");
+        String formViewInfo = getArguments().getString("formViewInfo");
+
         RelativeLayout rl = new RelativeLayout(this.getContext());
         RelativeLayout.LayoutParams prl = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
         rl.setLayoutParams(prl);
@@ -27,7 +39,7 @@ public class TestFragment extends Fragment {
 
         final TextView tv = new TextView(this.getContext());
         tv.setId(View.generateViewId());
-        tv.setText(this.mMessage);
+        tv.setText(message);
         tv.setTextAppearance(android.R.style.TextAppearance_Large);
 
         RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
