@@ -39,7 +39,7 @@ public class EBSplitViewFragment extends Fragment {
 
         final TextView tv = new TextView(this.getContext());
         tv.setId(View.generateViewId());
-        tv.setText(message);
+        tv.setText(tableViewInfo);
         tv.setTextAppearance(android.R.style.TextAppearance_Large);
 
         RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
