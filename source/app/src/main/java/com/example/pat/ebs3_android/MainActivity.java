@@ -38,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
         final TabLayout tl = new TabLayout(this);
         tl.setId(View.generateViewId());
-        tl.setLayoutParams(new TabLayout.LayoutParams(TabLayout.LayoutParams.MATCH_PARENT, TabLayout.LayoutParams.WRAP_CONTENT));
+
+        RelativeLayout.LayoutParams ptl = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        ptl.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        tl.setLayoutParams(ptl);
         rl.addView(tl);
 
         final ViewPager vp = new ViewPager(this);
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         vp.setBackgroundColor(Color.BLUE);
 
         RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT);
-        params.addRule(RelativeLayout.BELOW, tl.getId());
+        params.addRule(RelativeLayout.ABOVE, tl.getId());
         vp.setLayoutParams(params);
 
         rl.addView(vp);
