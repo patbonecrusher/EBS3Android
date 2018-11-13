@@ -25,10 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffaf371b-9c81-43bc-913b-a761d91ffd57" name="Default" comment="Switched to no layout resource.  All code generated.">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBFormView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBSplitViewFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBSplitViewFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MyListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,27 +66,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EBListView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EBListView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="299">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="e#638#639#0" expanded="true" />
                 <element signature="e#668#669#0" expanded="true" />
                 <element signature="e#742#743#0" expanded="true" />
                 <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#653#661#0" expanded="true" />
+                <element signature="e#1544#1552#0" expanded="true" />
+                <element signature="e#1987#1995#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EBFormView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EBFormView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBFormView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+            <state relative-caret-position="481">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="46" />
+              <caret line="12" column="74" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -2673,15 +2671,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/ebclasses/EBUIBuilder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/MyListFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBSplitViewFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBFormView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="326" />
-    <option name="y" value="50" />
+    <option name="x" value="126" />
+    <option name="y" value="61" />
     <option name="width" value="1503" />
     <option name="height" value="1098" />
   </component>
@@ -2898,7 +2896,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="326" y="50" width="1503" height="1098" extended-state="0" />
+    <frame x="126" y="61" width="1503" height="1098" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" />
@@ -3232,38 +3230,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="46" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/EBDatabase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/926e647a8ad69dd8ec1172e63f580eaf/jars/classes.jar!/android/support/v4/app/FragmentManagerImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="1573" selection-start-line="1573" selection-end-line="1573" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#653#661#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3282,10 +3252,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBFormView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        <state relative-caret-position="481">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/EBDatabase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/JSUserInterface.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="74" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#1544#1552#0" expanded="true" />
+            <element signature="e#1987#1995#0" expanded="true" />
           </folding>
         </state>
       </provider>

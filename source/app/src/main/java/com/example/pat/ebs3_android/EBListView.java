@@ -7,8 +7,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EBListView extends ListFragment {
 
@@ -44,17 +48,29 @@ public class EBListView extends ListFragment {
         JSONObject obj = null;
         try {
             obj = new JSONObject(tableViewInfo);
-            //String pageName = obj.getJSONObject("data").getString("pageName");
+            String fieldName = obj.getString("cellFieldName");
+            JSONArray data = obj.getJSONArray("data");
+
+            List<String> where = new ArrayList<String>();
+
+            for (int i = 0; i < data.length(); i++) {
+                JSONObject jsonobject = data.getJSONObject(i);
+                String name = jsonobject.getString(fieldName);
+                where.add(name);
+            }
+
+            String[] values = new String[ where.size() ];
+            where.toArray( values );
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+                    android.R.layout.simple_list_item_1, values);
+            setListAdapter(adapter);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2" };
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, values);
-        setListAdapter(adapter);
+//        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
+//                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
+//                "Linux", "OS/2" };
     }
 
     @Override
