@@ -64,6 +64,10 @@ public class EBListView extends ListFragment {
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
                     android.R.layout.simple_list_item_1, values);
             setListAdapter(adapter);
+
+            getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+            getListView().setSelector(R.drawable.list_level_selector);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -73,8 +77,19 @@ public class EBListView extends ListFragment {
 //                "Linux", "OS/2" };
     }
 
+    public void setActivateOnItemClick(boolean activateOnItemClick) {
+        // When setting CHOICE_MODE_SINGLE, ListView will automatically
+        // give items the 'activated' state when touched.
+//    	 Toast.makeText(getActivity(), "setActivateOnItemClick", Toast.LENGTH_SHORT).show();
+        getListView().setChoiceMode(activateOnItemClick ? ListView.CHOICE_MODE_SINGLE : ListView.CHOICE_MODE_NONE);
+        getListView().setSelector(R.drawable.list_level_selector);
+    }
+
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         if (listener != null) listener.onItemSelected(id);
+        getListView().setItemChecked(position, true);
+        getListView().setSelection(position);
+        getListView().setSelected(true);
     }
 }
