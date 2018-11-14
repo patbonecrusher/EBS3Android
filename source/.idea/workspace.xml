@@ -24,11 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffaf371b-9c81-43bc-913b-a761d91ffd57" name="Default" comment="Switched to no layout resource.  All code generated.">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/list_level_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pat/ebs3_android/EBListView.java" afterDir="false" />
-    </list>
+    <list default="true" id="ffaf371b-9c81-43bc-913b-a761d91ffd57" name="Default" comment="Switched to no layout resource.  All code generated." />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2954,7 +2950,7 @@
       <window_info id="Structure" order="1" sideWeight="0.5007452" side_tool="true" weight="0.24942791" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3996004" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3996004" />
       <window_info id="Favorites" order="2" sideWeight="0.5007452" side_tool="true" weight="0.24942791" />
       <window_info anchor="right" id="Assistant" order="4" weight="0.32991102" />
       <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32967034" />
